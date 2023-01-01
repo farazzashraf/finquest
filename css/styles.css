@@ -128,39 +128,43 @@ body {
     margin-top: -23.8rem;
 }
 
-.dashboard .portfolio {
+.dashboard>.aside>aside {
+    display: none;
+}
+
+.dashboard>.aside>.portfolio {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.dashboard .portfolio>div {
+.dashboard>.aside>.portfolio>div {
     display: flex;
     align-items: center;
-    margin: -0.5rem 1rem;
+    margin: -0.8rem 1rem;
 }
 
-.dashboard>.portfolio>div>img {
+.dashboard>.aside>.portfolio>div>img {
     width: 2rem;
     height: 2rem;
 }
 
-.dashboard .portfolio>div>h4 {
+.dashboard>.aside>.portfolio>div>h4 {
     margin-left: 1rem;
     font-size: 1.5rem;
 }
 
-.dashboard>.portfolio>.orders {
+.dashboard>.aside>.portfolio>.orders {
     margin-right: 1rem;
 }
 
-.dashboard>.portfolio>.orders>a:hover {
+.dashboard>.aside>.portfolio>.orders>a:hover {
     background: rgba(128, 128, 128, 0.153);
-    padding: 0.5rem;
+    padding: 1.1rem 0.5rem;
     border-radius: 50%;
 }
 
-.dashboard>.portfolio>.orders>a {
+.dashboard>.aside>.portfolio>.orders>a {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
@@ -182,7 +186,7 @@ body {
 }
 
 .dashboard>.usd-crypto>p {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     padding: 1rem;
     color: white;
     font-weight: bold;
@@ -212,7 +216,7 @@ body {
 }
 
 .dashboard>.usd-crypto>.circle-flex>div>p {
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .dashboard>.usd-crypto>.circle-flex>.crypto {
@@ -267,15 +271,17 @@ body {
 }
 
 .dashboard>.recommendation {
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 .dashboard>.recommendation>h3 {
     font-size: 1.5rem;
-    margin: 2rem 1.5rem;
+    margin: 1.4rem 1.5rem;
 }
 
-.dashboard>.recommendation>.bitcoin1 {}
+.dashboard>.recommendation>.bitcoin1 {
+    margin: 0.5rem 0;
+}
 
 .dashboard>.recommendation>.bitcoin1>a {
     display: flex;
@@ -284,6 +290,7 @@ body {
     text-decoration: none;
     color: black;
     padding: 0 1.5rem;
+    margin-top: -1rem;
 }
 
 .dashboard>.recommendation>.bitcoin1>a:hover {
@@ -339,7 +346,7 @@ body {
 
 .dashboard>.view-market {
     text-align: center;
-    margin-top: -1rem;
+    margin-top: 0;
 }
 
 .dashboard>.view-market:hover {
@@ -356,7 +363,7 @@ body {
     font-size: 1.2rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .sidebar {
         width: 30%;
     }
@@ -368,6 +375,143 @@ body {
     .sidebar>.vertical-line {
         height: 43.5rem;
     }
+}
 
 
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .dashboard {
+        width: 100%;
+    }
+
+    .dashboard>.aside {
+        display: flex;
+        align-items: center;
+    }
+
+    .dashboard>.aside>aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.2rem;
+        margin: 0.8rem 0;
+        margin-left: 0.5rem;
+    }
+
+    .dashboard>.aside>aside>span {
+        background-color: rgb(2, 2, 2);
+        width: 1.2rem;
+        height: 0.1rem;
+    }
+
+    .dashboard>.aside>.portfolio>div>img {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    
+    .dashboard>.aside>.portfolio>div>h4 {
+        font-size: 1.2rem;
+    }
+
+    .dashboard>.aside>.portfolio>div {
+        margin: -0.8rem 0.8rem;
+    }
+
+    .dashboard>.aside>.portfolio>.orders>a {
+        position: absolute;
+        right: 1rem;
+        font-size: 0.8rem;
+    }
+ 
+    .dashboard>.usd-crypto {
+        
+    }
+    
+    .dashboard>.usd-crypto>p {
+        font-size: 1.6rem;
+        padding: 0.5rem;
+    }
+
+    .dashboard>.usd-crypto>.circle-flex {
+        display: flex;
+        margin-left: 0.5rem;
+        margin-top: -2rem;
+    }
+    
+    .dashboard>.usd-crypto>.circle-flex>div {
+        display: flex;
+        gap: 0.2rem;
+        align-items: center;
+        color: white;
+    }
+    
+    .dashboard>.usd-crypto>.circle-flex>div>.circle {
+        background: lightblue;
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+    }
+    
+    .dashboard>.usd-crypto>.circle-flex>div>p {
+        font-size: 0.8rem;
+    }
+    
+    .dashboard>.usd-crypto>.circle-flex>.crypto {
+        margin-left: 6.5rem;
+    }
+    
+    .dashboard>.usd-crypto>.start>a {
+        border-radius: 12px;
+        width: 30rem;
+        padding: 0.2rem 2rem;
+        font-size: 0.6rem;
+    }
+
+    .dashboard>.unlock {
+        background: rgba(211, 211, 211, 0.215);
+        width: 100%;
+        margin: 1rem 0;
+        padding: 2rem 0;
+    }
+    
+    .dashboard>.unlock>p {
+        margin: 0 1.2rem;
+        margin-top: -1.5rem;
+        padding: 0;
+        font-size: 1rem;
+    }
+    
+    .dashboard>.unlock>a {
+        margin: 0 1rem;
+        text-align: right;
+        float: right;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-top: 0.3rem;
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    .dashboard>.recommendation>.bitcoin1 {
+        margin: 1rem 0;
+    }
+
+    .dashboard>.view-market {
+        text-align: center;
+        margin-top: 1.2rem;
+    }
+    
+    .dashboard>.view-market>a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: black;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    
+    
 }
