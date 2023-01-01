@@ -121,9 +121,9 @@ body {
     border-left: 1px solid rgb(69, 69, 69);
     opacity: 0.2;
     height: 46.5rem;
-    /* position: absolute;
-    left: 19.1rem;
-    top: 0; */
+    position: absolute;
+    /* left: 19.1rem;
+    top: -23.8rem; */
     margin-left: 19.1rem;
     margin-top: -23.8rem;
 }
@@ -354,4 +354,20 @@ body {
     text-decoration: none;
     color: black;
     font-size: 1.2rem;
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 30%;
+    }
+
+    .dashboard {
+        width: 70%;
+    }
+
+    .sidebar>.vertical-line {
+        height: 43.5rem;
+    }
+
+
 }
